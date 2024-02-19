@@ -1,0 +1,19 @@
+version: "3"
+services:
+  #mongodb:
+  #image: mongo
+  #ports:
+  #- "27017:27017"
+  server:
+    build: ./server
+    ports:
+      - "5001:5001"
+    env_file:
+      - ./server/.env
+    command: npm run start
+  client:
+    build: ./client
+    ports:
+      - "3000:3000"
+    depends_on:
+      - server

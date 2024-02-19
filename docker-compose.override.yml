@@ -1,0 +1,16 @@
+version: "3"
+services:
+  #mongodb:
+  #volumes:
+  #- mongodb_data:/data/db
+  server:
+    command: npm run start:dev
+    volumes:
+      - ./server:/server
+      - ./server/node_modules:/app/node_modules
+  client:
+    volumes:
+      - ./client:/app/
+      - ./client/node_modules:/app/node_modules
+#volumes:
+#mongodb_data:

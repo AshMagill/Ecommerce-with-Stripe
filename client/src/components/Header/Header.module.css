@@ -1,0 +1,90 @@
+.navbarContainer {
+  width: stretch;
+  padding: 1rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+  margin: 0rem;
+}
+.siteName {
+  font-size: 1rem;
+  text-decoration: none;
+  color: rgb(60, 60, 60);
+  font-family: "Fjalla One", sans-serif;
+  padding-top: 0.3rem;
+  padding-right: 2rem;
+}
+.siteLogo {
+  width: 1.7rem;
+  display: none;
+}
+.cartContainer {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+}
+.cartIcon {
+  position: absolute;
+  width: 1.8rem;
+}
+.cartItemCount {
+  left: 0.45rem;
+  top: -0.5rem;
+  z-index: 1;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  text-align: center;
+  height: 0.8rem;
+  width: 0.8rem;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  padding: 0.2rem;
+}
+
+/*larger screens*/
+
+@media (min-width: 20rem) {
+  .navbarContainer {
+    padding: 3rem;
+  }
+  .siteName {
+    padding-top: 0rem;
+    padding-right: 0rem;
+    font-size: 1.4rem;
+  }
+  .siteLogo {
+    display: block;
+    width: 1.6rem;
+  }
+}
+@media (min-width: 31rem) {
+  .siteName {
+    font-size: 2rem;
+  }
+  .siteLogo {
+    width: 2.5rem;
+  }
+  .cartIcon {
+    position: absolute;
+    width: 2.8rem;
+  }
+  .cartItemCount {
+    height: 1.2rem;
+    width: 1.2rem;
+    top: -0.5rem;
+    left: 0.8rem;
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 53rem) {
+  .siteName {
+    font-size: 3rem;
+  }
+  .siteLogo {
+    width: 2.7rem;
+  }
+}

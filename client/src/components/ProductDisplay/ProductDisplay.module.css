@@ -1,0 +1,118 @@
+/* === mobile first === */
+
+.productsContainer {
+  position: relative;
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.productContainerScreen {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(60, 60, 60, 0.4);
+  border-radius: 0.3rem;
+  display: none;
+}
+
+.productsContainer img {
+  width: 100%;
+}
+
+.productsHeader {
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  color: rgb(60, 60, 60);
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.productsBody {
+  z-index: 3;
+  display: grid;
+  gap: 1rem;
+  margin: auto;
+}
+
+.productItem {
+  display: grid;
+  background-color: rgb(240, 234, 234, 0.7);
+  text-decoration: none;
+  border-radius: 0.1rem;
+}
+
+.productImage {
+  align-self: start;
+  padding: 1rem;
+  padding-bottom: 0;
+}
+
+.productImage img {
+  border-radius: 0.1rem;
+}
+
+.productName {
+  padding: 1rem;
+  text-align: center;
+  font-size: medium;
+  margin: auto;
+  color: rgb(60, 60, 60);
+}
+
+/* === medium (tablet and up sizes) media queries === */
+
+@media (min-width: 46rem) {
+  .productsContainer {
+    box-shadow: 0.1rem 0.1rem 0.4rem 0 rgb(93, 91, 91);
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    padding-bottom: 3rem;
+    background-image: url("../../images/productsBackGroundImage.jpg");
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+    border-radius: 0.3rem;
+  }
+
+  .productContainerScreen {
+    display: block;
+  }
+
+  .productsHeader {
+    margin-top: 3rem;
+    font-size: 2rem;
+    font-weight: 400;
+    color: white;
+    z-index: 1;
+  }
+
+  .productsBody {
+    padding: 1rem;
+    background-color: rgba(44, 40, 43, 0.3);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .productItem {
+    height: 100%;
+    margin: 0 auto;
+    width: 90%;
+    grid-template-rows: auto;
+    border-color: transparent;
+    border-width: 0.1rem;
+    border-style: solid;
+    background-color: rgb(240, 234, 234, 0.4);
+    padding-bottom: 0.2rem;
+  }
+
+  .productName {
+    font-size: large;
+    color: rgb(255, 255, 255);
+  }
+}

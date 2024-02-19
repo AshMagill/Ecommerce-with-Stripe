@@ -1,0 +1,67 @@
+/* Set the footer to stretch across the width of the page and align it to the bottom */
+.footer {
+  justify-self: stretch;
+  align-self: end;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: rgb(60, 60, 60);
+  color: white;
+  padding: 1rem;
+  align-items: center;
+}
+
+/* Style for the modal buttons container in the footer */
+.modalButtonContainer {
+  text-align: center;
+}
+
+/* Style for the Creaky Door in the footer */
+.creditContainer {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+/* Style for the text / buttons in the footer */
+.button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+  font-weight: 400;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #898e8c;
+  padding: 0.8rem;
+}
+
+/* Style for the text on hover */
+.text:hover {
+  color: #a0a0a0;
+}
+
+/* Media query for larger screens */
+@media (min-width: 36rem) {
+  .footer {
+    grid-template-columns: 1fr 1fr;
+    .button {
+      font-size: 1.2rem;
+      margin: 0rem;
+    }
+  }
+}
+/* Media query for even larger screens */
+@media (min-width: 50rem) {
+  .button {
+    font-size: 1.2rem;
+  }
+  .footer {
+    height: 5rem;
+  }
+  .modalButtonContainer {
+    padding-left: rem;
+  }
+}

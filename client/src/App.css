@@ -1,0 +1,37 @@
+.mainContainer {
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  justify-items: center;
+}
+
+/*there is an absolute div in app.js for overall relative positoning, but this one is still needed for background color when modal pops up*/
+.modalBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  padding-top: 0;
+}
+
+/*this gives an overall padding for the whole app*/
+.app {
+  width: 90%;
+}
+
+/*plus and minus icons are used in Cart.js and in SingleItems.js*/
+.plusMinusIcons {
+  font-size: 1.6rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/*styling for larger screens*/
+@media (min-width: 90rem) {
+  .app {
+    /*increases margin on sides*/
+    width: 60%;
+  }
+}

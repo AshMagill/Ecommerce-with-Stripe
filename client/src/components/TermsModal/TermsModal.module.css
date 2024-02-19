@@ -1,0 +1,54 @@
+/* terms */
+.termsContainer {
+  top: 17.5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+  background: #fff;
+  height: 65vh;
+  width: 100%;
+  margin: auto;
+  max-width: 800px;
+  box-shadow: 0.25rem 0rem 0.4rem 0 rgba(93, 91, 91, 0.3);
+  border-radius: 0.5rem;
+  /*theses media queries dont really belong at the bottom of the page becuase they are special settings for the modal*/
+  @media screen and (max-width: 500px) {
+    height: 100vh;
+    top: 0;
+    border-radius: 0;
+  }
+  @media screen and (max-height: 900px) {
+    height: 100vh;
+    top: 0;
+    border-radius: 0;
+  }
+}
+
+.disclaimerContainer {
+  position: absolute;
+  background: #fff;
+  top: 1.3rem;
+  left: 0;
+  height: 84%;
+  width: 90%;
+  zindex: 999;
+  margin: 5%;
+  borderradius: 0.2rem;
+  overflow: auto;
+}
+
+.exit {
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  font-weight: 400;
+  font-size: 1.2rem;
+  border: none;
+  z-index: 9999;
+}
+
+.exit p {
+  color: grey;
+  margin-top: 0.8rem;
+  margin-bottom: 0;
+}

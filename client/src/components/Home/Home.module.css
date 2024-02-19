@@ -1,0 +1,240 @@
+/* === mobile first === */
+/* === all comments are in this section === */
+
+.mobileHeaderPic {
+  width: 100%;
+  z-index: 2;
+  display: block;
+}
+
+/*this is the image for the larger screen sizes*/
+.deskTopHeaderPic {
+  display: none;
+}
+
+/*this wrapper is put around images to enable the tint screen to be absolute*/
+.relativeWrapper {
+  width: 100%;
+  position: relative;
+}
+
+/*this is for the tint that covers blank hero images*/
+.absoluteScreen {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(60, 60, 60, 0.4);
+  z-index: 1;
+}
+
+/*this for the tint that covers the hero with text*/
+.absoluteScreen2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(60, 60, 60, 0.4);
+  z-index: 1;
+  border-radius: 0.3rem;
+  display: none;
+}
+
+/*this is the container for the 2 heros that dont have text in them, it mostly controls the height*/
+.blankHeros {
+  height: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  max-height: 20rem;
+  display: block;
+}
+
+.heroHeader {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 1rem;
+  color: rgb(60, 60, 60);
+  font-size: 1.2rem;
+  margin: 3rem;
+  text-align: center;
+  z-index: 2;
+}
+
+/*this text is seperated by the other hero text because when the heroScreenWithtext is too small to fit all 4 texts, it only displays this one*/
+
+.heroText1 {
+  font-size: 1rem;
+  text-align: center;
+  color: rgb(60, 60, 60);
+  z-index: 2;
+  widows: 100%;
+}
+
+.heroText2 {
+  font-size: 1rem;
+  text-align: center;
+  color: rgb(60, 60, 60);
+  z-index: 2;
+}
+
+/*bottom container*/
+/*this image has to be in css so it can have the fixed underlayed effect when scrolling*/
+.bottomContainer {
+  background-image: url("../../images/pexels-matheus-bertelli-7163672.jpg");
+  width: 100%;
+  height: auto;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  color: white;
+  background-size: cover;
+  margin: 4rem auto;
+}
+
+.bottomHeader {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  font-family: "Fjalla One", sans-serif;
+  align-self: center;
+}
+
+.bottomOverlay {
+  background-color: rgb(60, 60, 60, 0.4);
+  display: grid;
+  height: 100%;
+  padding: 3rem;
+}
+
+.bottomDescription {
+  font-size: 0.9rem;
+  padding: 1rem;
+  padding-top: 2rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* === medium (tablet size) media queries === */
+
+@media (min-width: 53rem) {
+  .absoluteScreen2 {
+    display: block;
+  }
+  .heroContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin-bottom: 4rem;
+  }
+  .deskTopHeaderPic {
+    display: none;
+  }
+  .mobileHeaderPic {
+    display: none;
+  }
+  .blankHeros {
+    border-radius: 0.3rem;
+    box-shadow: 0.1rem 0.1rem 0.4rem 0 rgb(93, 91, 91);
+    display: none;
+  }
+  .heroScreenWithText {
+    border-radius: 0.3rem;
+    display: grid;
+    background-image: url("../../images/diysolar.jpg");
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0.1rem 0.1rem 0.4rem 0 rgb(93, 91, 91);
+    height: auto;
+    padding-top: 3rem;
+    padding: 3rem;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    padding-bottom: 3rem;
+  }
+  .heroHeader {
+    color: white;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .heroText1 {
+    color: white;
+    font-size: large;
+    text-align: center;
+    margin: auto;
+    display: block;
+    padding: 1rem;
+  }
+  .heroText2 {
+    display: block;
+    color: white;
+    font-size: large;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  .bottomContainer {
+    box-shadow: 0.1rem 0.1rem 0.4rem 0 rgb(93, 91, 91);
+    border-radius: 0.3rem;
+  }
+  .bottomHeader {
+    font-size: 2rem;
+  }
+  .bottomDescription {
+    font-size: large;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+  .bottomOverlay {
+    border-radius: 0.3rem;
+  }
+}
+
+/* === large (desktop size) media queries === */
+
+@media (min-width: 80rem) {
+  .heroContainer {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .deskTopHeaderPic {
+    display: block;
+    width: 100%;
+    border-radius: 0.3rem;
+  }
+
+  .blankHeros {
+    display: block;
+  }
+
+  .heroScreenWithText {
+    height: 100%;
+    padding-top: 0;
+    padding: 0;
+    grid-template-columns: 1fr;
+    padding-bottom: 0;
+  }
+
+  .heroText1 {
+    display: block;
+    padding: 1rem;
+    margin-top: 0;
+  }
+
+  .heroText2 {
+    display: none;
+    padding: 0;
+  }
+}
