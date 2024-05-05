@@ -19,8 +19,5 @@ This project is a website for selling solar panels using a Stripe account. It is
 2. Install dependencies using `npm install`
 3. Start the server using `npm start`
 4. To set up the project using Docker, run `docker-compose up`
-## Contributors
-- John Doe
-- Jane Smith
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for detail
